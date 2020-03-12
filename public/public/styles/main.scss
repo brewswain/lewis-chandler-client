@@ -1,0 +1,388 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+@-moz-document url-prefix() {
+  .contact {
+    margin-top: 15rem;
+  }
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  padding-top: 8vh;
+  overflow-x: hidden;
+}
+
+// navbar
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #555555;
+  z-index: 999;
+  font-size: 1.4rem;
+}
+
+.nav-logo {
+  color: whitesmoke;
+  position: fixed;
+  left: 10%;
+}
+
+.nav-container {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  position: fixed;
+  right: 0%;
+  list-style-type: none;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.nav-items {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+  font-size: 1.8rem;
+}
+
+.nav-link:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  transform: scaleX(0);
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.nav-link:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// Main site styling
+
+.section-subtitle {
+  font-size: 10rem;
+  text-align: left;
+  padding-left: 3rem;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+// Landing Page
+
+.landing-page {
+  font-family: "Rubik", sans-serif;
+  height: 92vh;
+  width: 100vw;
+  display: flex;
+
+  // img {
+  //   position: absolute;
+  //   right: 0;
+  //   top: 8vh;
+
+  //   width: 65%;
+  //   height: 100vh;
+  // }
+}
+
+// .hero-image {
+//   // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+//   //   url(https://images.unsplash.com/photo-1543071293-d91175a68672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+//   // background-position: center;
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   position: relative;
+//   height: 100%;
+
+//   .caption-button {
+//     padding: 25px 60px;
+//     border-radius: 4px;
+//     border: 2px solid rgb(53, 56, 61);
+//     background: none;
+//     font-size: 1.25rem;
+//     background: rgb(53, 56, 61);
+//     color: whitesmoke;
+//     transition: ease-in-out 200ms;
+//     cursor: pointer;
+
+//     &:hover {
+//       background: white;
+//       color: black;
+//       border: 2px solid white;
+//     }
+//   }
+
+//   .hero-text {
+//     text-align: center;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     color: white;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     h1 {
+//       font-size: 4.5rem;
+//       padding-bottom: 30px;
+//     }
+
+//     span {
+//       font-size: 1.2rem;
+//       margin-bottom: 100px;
+//     }
+//   }
+// }
+
+.slick {
+  display: flex;
+  justify-content: flex-end;
+  div {
+    width: 60vw;
+
+    img {
+      max-height: 92vh;
+      width: auto;
+    }
+  }
+}
+
+.caption-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption {
+  padding: 50px 0 100px 50px;
+  max-width: 40%;
+  text-align: center;
+
+  h1 {
+    font-size: 6.5rem;
+    padding-bottom: 30px;
+  }
+
+  .caption-subtitle {
+    font-size: 1.8rem;
+    color: rgb(128, 128, 128);
+    text-align: justify;
+    padding-right: 2rem;
+  }
+
+  .caption-button {
+    margin-top: 100px;
+    padding: 25px 60px;
+    border-radius: 4px;
+    border: 2px solid rgb(38, 90, 202);
+    background: none;
+    font-size: 1.8rem;
+    background: rgb(38, 90, 202);
+    color: whitesmoke;
+    transition: ease-in-out 200ms;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+      color: black;
+      border: 2px solid rgb(38, 90, 202);
+    }
+  }
+}
+
+// About Us section
+
+.about-us {
+  padding-top: 6vh;
+
+  margin: auto;
+  height: 100vh;
+
+  .image-container {
+    display: flex;
+
+    img {
+      padding-right: 55px;
+      height: 100%;
+      max-width: auto;
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    // font-size: 2.7rem;
+    // text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  span {
+    font-size: 1.7rem;
+    text-align: justify;
+    padding-top: 15px;
+  }
+  ul {
+    text-align: justify;
+    list-style: inside;
+    li {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+// Projects section
+
+.projects {
+  height: 92vh;
+  padding-top: 4rem;
+
+  h1 {
+    font-size: 2.7rem;
+    text-align: center;
+  }
+}
+
+.projects-grid {
+  margin: 0 auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50%;
+  grid-gap: 0;
+  grid-auto-flow: dense;
+  justify-items: center;
+
+  p {
+    padding: 150px;
+  }
+}
+
+// Contact Us section
+
+.contact {
+  padding-top: 9vh;
+  height: 100vh;
+  background: #1d1d1d;
+  color: rgb(107, 107, 107);
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    .contact-form {
+      width: 50vw;
+    }
+  }
+
+  h1 {
+    padding-bottom: 5rem;
+  }
+
+  span {
+    font-size: 1.7rem;
+  }
+
+  .fa-mobile-alt {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+
+  .contact-info {
+    color: white;
+    font-weight: 600;
+    font-size: 1.7rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.contact-information {
+  margin-top: 80px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  margin-top: 50px;
+}
+
+.form-caption {
+  font-size: 2rem;
+  padding-top: 25px;
+  color: rgb(107, 107, 107);
+}
+
+.form-message {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-data {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+
+  color: white;
+  font-size: 2rem;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  width: 30vw;
+
+  .form-data:focus {
+    color: white;
+  }
+}
+
+.large {
+  font-size: 3rem;
+}
+
+.submit-button {
+  padding-top: 25px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(107, 107, 107);
+  font-size: 2.5rem;
+
+  cursor: pointer;
+  margin: 0 auto;
+  width: 30vw;
+  text-decoration: underline;
+  text-decoration-color: rgb(107, 107, 107);
+}
