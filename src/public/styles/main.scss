@@ -51,6 +51,10 @@ nav {
   list-style-type: none;
 }
 
+.burger {
+  display: none;
+}
+
 a {
   color: whitesmoke;
   text-decoration: none;
@@ -101,67 +105,7 @@ h1 {
   height: 92vh;
   width: 100vw;
   display: flex;
-
-  // img {
-  //   position: absolute;
-  //   right: 0;
-  //   top: 8vh;
-
-  //   width: 65%;
-  //   height: 100vh;
-  // }
 }
-
-// .hero-image {
-//   // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-//   //   url(https://images.unsplash.com/photo-1543071293-d91175a68672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
-//   // background-position: center;
-//   // background-repeat: no-repeat;
-//   // background-size: cover;
-//   position: relative;
-//   height: 100%;
-
-//   .caption-button {
-//     padding: 25px 60px;
-//     border-radius: 4px;
-//     border: 2px solid rgb(53, 56, 61);
-//     background: none;
-//     font-size: 1.25rem;
-//     background: rgb(53, 56, 61);
-//     color: whitesmoke;
-//     transition: ease-in-out 200ms;
-//     cursor: pointer;
-
-//     &:hover {
-//       background: white;
-//       color: black;
-//       border: 2px solid white;
-//     }
-//   }
-
-//   .hero-text {
-//     text-align: center;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     color: white;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-
-//     h1 {
-//       font-size: 4.5rem;
-//       padding-bottom: 30px;
-//     }
-
-//     span {
-//       font-size: 1.2rem;
-//       margin-bottom: 100px;
-//     }
-//   }
-// }
 
 .slick {
   display: flex;
@@ -342,10 +286,6 @@ h1 {
   align-items: center;
 }
 
-.contact-information {
-  // margin-top: 80px;
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -406,10 +346,26 @@ h1 {
 .submit-button:hover {
   color: white;
   text-decoration-color: white;
-  transition: all 1s;
+  transition: all 1s ease-in-out;
 }
 
 // --- Responsive Queries ---
+
+// Scrollbar setting on desktop/tablets
+
+@media only screen and (min-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 0.35rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #da2b6e;
+  }
+}
 
 // Small Monitor
 
@@ -422,21 +378,73 @@ h1 {
   // Navbar
 
   nav {
-    position: fixed;
-    top: 0;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #555555;
+    justify-content: flex-end;
+    min-height: 10vh;
+    background-color: #3d3d3d;
     font-size: 1rem;
+
+    .nav-container {
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-start;
+      top: 10vh;
+      height: 100vh;
+      width: 70%;
+      background-color: rgb(241, 241, 241);
+      padding-right: 3rem;
+      transform: translateX(100%);
+      transition: all 0.5s ease-in-out;
+      -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.61);
+      -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.61);
+      box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.61);
+
+      .nav-items {
+        text-align: right;
+        padding: 30px 0;
+      }
+      .nav-link {
+        color: black;
+        font-size: 2rem;
+      }
+
+      .nav-link:hover:before {
+        transform: scaleX(0);
+      }
+    }
+
+    .nav-active {
+      transform: translateX(0%);
+    }
+
+    .toggle .line-1 {
+      transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    .toggle .line-2 {
+      opacity: 0;
+    }
+    .toggle .line-3 {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+
+  .burger {
+    display: block;
+    padding-right: 4rem;
+  }
+
+  .burger div {
+    width: 20px;
+    height: 2px;
+    background: whitesmoke;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
 
   // Main site
-
-  body {
-  }
 
   .section-subtitle {
     text-align: center;

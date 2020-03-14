@@ -1,4 +1,4 @@
-# Lewis Chandler Consultation Single Page Application
+# Lewis Chandler Consultation Static Website
 
 ## Basic Overview
 
