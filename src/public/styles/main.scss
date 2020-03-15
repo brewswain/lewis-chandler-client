@@ -517,15 +517,9 @@ h1 {
   // About Us
 
   .about-us {
-    padding-top: 9vh;
     height: 155vh;
 
-    h1 {
-      padding-bottom: 5rem;
-    }
-
     .content-container {
-      margin: 0;
       padding: 0 0 0 35px;
     }
 
@@ -702,7 +696,6 @@ h1 {
     }
 
     .image-container {
-      flex-direction: column;
       width: 90vw;
 
       img {
@@ -720,13 +713,6 @@ h1 {
 
     .mobile {
       display: block;
-    }
-
-    span {
-      font-size: 1.5rem;
-    }
-    .caption-subtitle {
-      font-size: 1.8rem;
     }
   }
 }

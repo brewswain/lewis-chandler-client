@@ -536,14 +536,9 @@ h1 {
     width: auto;
   }
   .about-us {
-    padding-top: 9vh;
     height: 155vh;
   }
-  .about-us h1 {
-    padding-bottom: 5rem;
-  }
   .about-us .content-container {
-    margin: 0;
     padding: 0 0 0 35px;
   }
   .about-us .image-container {
@@ -712,10 +707,6 @@ h1 {
     padding: 0 15px;
   }
   .about-us .image-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     width: 90vw;
   }
   .about-us .image-container img {
@@ -729,12 +720,6 @@ h1 {
   }
   .about-us .mobile {
     display: block;
-  }
-  .about-us span {
-    font-size: 1.5rem;
-  }
-  .about-us .caption-subtitle {
-    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
