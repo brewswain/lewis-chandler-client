@@ -539,7 +539,7 @@ h1 {
     height: 155vh;
   }
   .about-us .content-container {
-    padding: 0 0 0 35px;
+    padding: 0;
   }
   .about-us .image-container {
     -webkit-box-orient: vertical;
