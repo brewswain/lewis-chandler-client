@@ -101,6 +101,10 @@ a {
           transform-origin: bottom left;
 }
 
+.nav-items:active {
+  background: none;
+}
+
 .section-subtitle {
   font-size: 10rem;
   text-align: left;
@@ -397,7 +401,7 @@ h1 {
   transition: all 1s ease-in-out;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 501px) {
   body::-webkit-scrollbar {
     width: 0.35rem;
   }
@@ -406,6 +410,172 @@ h1 {
   }
   body::-webkit-scrollbar-thumb {
     background: #da2b6e;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section-subtitle {
+    font-size: 8rem;
+  }
+  .nav-container {
+    width: 40%;
+  }
+  .landing-page {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .caption h1 {
+    font-size: 4.5rem;
+  }
+  .slick div {
+    width: 50vw;
+  }
+  .slick-slider {
+    left: 0 !important;
+  }
+  .about-us h1 {
+    padding-bottom: 3rem;
+  }
+  .about-us .content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: justify;
+    width: 90%;
+    margin: 0 20px;
+  }
+  .about-us .image-container {
+    width: 95vw;
+  }
+  .about-us .image-container img {
+    width: 50%;
+  }
+  .about-us .caption-subtitle {
+    font-size: 1.55rem;
+  }
+  .about-us .caption-subtitle li {
+    font-size: 1.6rem;
+  }
+  .contact .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact .contact-container .contact-form {
+    width: 90vw;
+  }
+  .contact .contact-container .form-data {
+    width: 90vw;
+  }
+  .contact .contact-container .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 5rem;
+  }
+  .contact .contact-information-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact .contact-information {
+    text-align: justify;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-container {
+    width: 50%;
+  }
+  .landing-page {
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .caption {
+    padding: 0;
+    max-width: 100vw;
+    display: block;
+  }
+  .caption h1 {
+    font-size: 4rem;
+  }
+  .caption .caption-subtitle {
+    padding-left: 2rem;
+  }
+  .caption .caption-button {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .slick {
+    overflow-x: hidden;
+  }
+  .slick div {
+    width: 100vw;
+  }
+  .slick div img {
+    max-height: 60vh;
+    width: auto;
+  }
+  .about-us {
+    padding-top: 9vh;
+    height: 155vh;
+  }
+  .about-us h1 {
+    padding-bottom: 5rem;
+  }
+  .about-us .content-container {
+    margin: 0;
+    padding: 0 0 0 35px;
+  }
+  .about-us .image-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90vw;
+  }
+  .about-us .image-container img {
+    height: 100%;
+    max-width: auto;
+  }
+  .about-us .image-container .about-image {
+    padding: 0 0 0 20px;
+  }
+  .about-us .caption-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us span {
+    font-size: 1.5rem;
+  }
+  .about-us .caption-subtitle {
+    font-size: 1.8rem;
   }
 }
 
@@ -534,6 +704,9 @@ h1 {
     padding-top: 9vh;
     height: 240vh;
   }
+  .about-us h1 {
+    padding-bottom: 5rem;
+  }
   .about-us .content-container {
     margin: 0;
     padding: 0 15px;
@@ -544,6 +717,9 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 90vw;
+  }
+  .about-us .image-container img {
+    width: 100%;
   }
   .about-us .image-container .about-image {
     padding: 0 0 0 10px;
@@ -557,38 +733,8 @@ h1 {
   .about-us span {
     font-size: 1.5rem;
   }
-  .contact .contact-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .contact .contact-container .contact-form {
-    width: 90vw;
-  }
-  .contact .contact-container .form-data {
-    width: 90vw;
-  }
-  .contact .contact-container .button-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-bottom: 5rem;
-  }
-  .contact .contact-information-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact .contact-information {
-    text-align: justify;
-    margin-top: 15px;
+  .about-us .caption-subtitle {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

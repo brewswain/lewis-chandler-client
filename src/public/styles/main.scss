@@ -86,6 +86,10 @@ a {
   transform-origin: bottom left;
 }
 
+.nav-items:active {
+  background: none;
+}
+
 // Main site styling
 
 .section-subtitle {
@@ -353,7 +357,7 @@ h1 {
 
 // Scrollbar setting on desktop/tablets
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 501px) {
   body::-webkit-scrollbar {
     width: 0.35rem;
   }
@@ -367,7 +371,192 @@ h1 {
   }
 }
 
+// Medium Monitor
+
+@media only screen and (max-width: 1200px) {
+  // Main Site Styling
+
+  .section-subtitle {
+    font-size: 8rem;
+  }
+
+  // NavBar Styling
+
+  .nav-container {
+    width: 40%;
+  }
+
+  // Landing Page Styling
+
+  .landing-page {
+    justify-content: space-between;
+  }
+
+  .caption {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+  .slick {
+    div {
+      width: 50vw;
+    }
+  }
+
+  .slick-slider {
+    left: 0 !important;
+  }
+
+  // About Us Section
+
+  .about-us {
+    h1 {
+      padding-bottom: 3rem;
+    }
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: justify;
+      width: 90%;
+      margin: 0 20px;
+    }
+
+    .image-container {
+      width: 95vw;
+      img {
+        width: 50%;
+      }
+    }
+
+    .caption-subtitle {
+      font-size: 1.55rem;
+
+      li {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  // Contact Us
+  .contact {
+    .contact-container {
+      flex-direction: column-reverse;
+
+      .contact-form {
+        width: 90vw;
+      }
+
+      .form-data {
+        width: 90vw;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5rem;
+      }
+    }
+
+    .contact-information-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-information {
+      text-align: justify;
+      margin-top: 15px;
+    }
+  }
+}
+
 // Small Monitor
+
+@media only screen and (max-width: 800px) {
+  // Navbar styling
+  .nav-container {
+    width: 50%;
+  }
+
+  // Landing Page
+
+  .landing-page {
+    height: 100vh;
+    flex-direction: column-reverse;
+  }
+
+  .caption {
+    padding: 0;
+    max-width: 100vw;
+    display: block;
+
+    h1 {
+      font-size: 4rem;
+    }
+    .caption-subtitle {
+      padding-left: 2rem;
+    }
+
+    .caption-button {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .slick {
+    overflow-x: hidden;
+    div {
+      width: 100vw;
+
+      img {
+        max-height: 60vh;
+        width: auto;
+      }
+    }
+  }
+
+  // About Us
+
+  .about-us {
+    padding-top: 9vh;
+    height: 155vh;
+
+    h1 {
+      padding-bottom: 5rem;
+    }
+
+    .content-container {
+      margin: 0;
+      padding: 0 0 0 35px;
+    }
+
+    .image-container {
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+
+      img {
+        height: 100%;
+        max-width: auto;
+      }
+
+      .about-image {
+        padding: 0 0 0 20px;
+      }
+    }
+
+    .caption-container {
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      font-size: 1.5rem;
+    }
+    .caption-subtitle {
+      font-size: 1.8rem;
+    }
+  }
+}
 
 // Mobile View
 @media only screen and (max-width: 500px) {
@@ -503,6 +692,10 @@ h1 {
     padding-top: 9vh;
     height: 240vh;
 
+    h1 {
+      padding-bottom: 5rem;
+    }
+
     .content-container {
       margin: 0;
       padding: 0 15px;
@@ -511,6 +704,10 @@ h1 {
     .image-container {
       flex-direction: column;
       width: 90vw;
+
+      img {
+        width: 100%;
+      }
 
       .about-image {
         padding: 0 0 0 10px;
@@ -528,35 +725,8 @@ h1 {
     span {
       font-size: 1.5rem;
     }
-  }
-
-  // Contact Us
-  .contact {
-    .contact-container {
-      flex-direction: column-reverse;
-
-      .contact-form {
-        width: 90vw;
-      }
-
-      .form-data {
-        width: 90vw;
-      }
-      .button-container {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 5rem;
-      }
-    }
-
-    .contact-information-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    .contact-information {
-      text-align: justify;
-      margin-top: 15px;
+    .caption-subtitle {
+      font-size: 1.8rem;
     }
   }
 }
