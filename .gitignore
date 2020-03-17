@@ -1,2 +1,6 @@
 # backup folder
 backup/
+
+# Custom exclusions
+src/functions/
+src/public/scripts/firebase.utils.js

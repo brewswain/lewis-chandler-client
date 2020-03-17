@@ -63,3 +63,7 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Custom exclusions
+src/functions/
+src/public/scripts/firebase.utils.js

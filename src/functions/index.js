@@ -23,8 +23,8 @@ exports.firebaseEmail = functions.firestore
     const message = change.data() || {};
 
     const msg = {
-      to: "test@email.com",
-      from: "test-email@test.com",
+      to: "brandonlee2543@hotmail.com",
+      from: "admin@lewis-chandler.web.app",
       templateId: SENDGRID_TEMPLATE_KEY,
       dynamic_template_data: {
         name: message.name,

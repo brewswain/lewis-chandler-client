@@ -351,6 +351,33 @@ h1 {
   transition: all 1s ease-in-out;
 }
 
+// Footer
+
+footer {
+  position: absolute;
+  height: 5vh;
+  width: 100vw;
+
+  background: #555555;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-size: 1.7rem;
+
+    a {
+      font-size: 2rem;
+      color: rgb(59, 193, 226);
+      // color: rgb(69, 198, 221);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 // --- Responsive Queries ---
 
 // Scrollbar setting on desktop/tablets
@@ -712,5 +739,24 @@ h1 {
     .mobile {
       display: block;
     }
+  }
+
+  footer {
+    height: 12vh;
+    padding: 0 10px;
+    span {
+      font-size: 1.5rem;
+
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// iPhone 5 Specific styling
+@media only screen and (max-width: 320px) {
+  .about-us {
+    height: 275vh;
   }
 }

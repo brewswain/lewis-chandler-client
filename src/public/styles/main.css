@@ -401,6 +401,36 @@ h1 {
   transition: all 1s ease-in-out;
 }
 
+footer {
+  position: absolute;
+  height: 5vh;
+  width: 100vw;
+  background: #555555;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer span {
+  font-size: 1.7rem;
+}
+
+footer span a {
+  font-size: 2rem;
+  color: #3bc1e2;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 501px) {
   body::-webkit-scrollbar {
     width: 0.35rem;
@@ -720,6 +750,22 @@ h1 {
   }
   .about-us .mobile {
     display: block;
+  }
+  footer {
+    height: 12vh;
+    padding: 0 10px;
+  }
+  footer span {
+    font-size: 1.5rem;
+  }
+  footer span a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .about-us {
+    height: 275vh;
   }
 }
 /*# sourceMappingURL=main.css.map */

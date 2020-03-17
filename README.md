@@ -114,4 +114,5 @@ firebase functions:config:set sendgrid.template=Insert_template_key_here
 - [x] Landing Page segment must have low-rise/high-rise buildings as a hero (Slick JS was used for this).
 - [x] Template for Projects placed in html/CSS files for future expansion
 - [x] Contact Form functionality
-- [ ] Fully responsive Design
+- [X] Fully responsive Design
+- [X] Footer Must have association with another company for legal purposes.
