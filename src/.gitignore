@@ -65,5 +65,3 @@ node_modules/
 .env
 
 # Custom exclusions
-src/functions/
-src/public/scripts/firebase.utils.js
